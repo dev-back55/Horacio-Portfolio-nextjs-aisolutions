@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+:root {
+  --foreground-rgb: 24, 35, 15;
+  --background-rgb: 211, 238, 152;
+  --primary-rgb: 114, 191, 120;
+  --secondary-rgb: 160, 214, 131;
+  --accent-rgb: 255, 255, 159;
+}
+
+.dark {
+  --foreground-rgb: 31, 125, 83;
+  --background-rgb: 39, 57, 28;
+  --primary-rgb: 31, 125, 83;
+  --secondary-rgb: 37, 95, 56;
+  --accent-rgb: 255, 255, 159;
+}
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-wave {
+  animation: wave 2.5s ease infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
