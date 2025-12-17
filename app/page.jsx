@@ -58,6 +58,18 @@ export default function HomePage() {
       link: "https://www.itechrawson.com.ar",
     },
     {
+      title: "Cámara de Industria, Comercio, Producción y Turismo de Rawson",
+      description: "Web App Development - Dashboard",
+      image: "/images/camara.webp",
+      link: "https://www.camaracomerciorawson.com/",
+    },
+    {
+      title: "Cámara de Industria, Comercio, Producción y Turismo de Rawson",
+      description: "Web App Development - Cobranzas",
+      image: "/images/camara-cobranzas.webp",
+      link: "https://www.camaracomerciorawson.online/",
+    },
+    {
       title: "Flama Innovación",
       description: "Web Site Development - Web Design",
       image: "/images/flama-innovacion.webp",
@@ -76,6 +88,18 @@ export default function HomePage() {
       link: "https://fmbahiaengano.com/",
     },
     {
+      title: "Cecilia Maria Aliaga",
+      description: "Web Development - Portfolio",
+      image: "/images/cecilia-aliaga.webp",
+      link: "https://www.ceciliamaliaga.com.ar/",
+    },
+    {
+      title: "Marina R. Griffiths",
+      description: "Web Development - Portfolio",
+      image: "/images/marina-griffiths.webp",
+      link: "https://www.marinargriffiths.com.ar/",
+    },
+    {
       title: "Next Eleven Agency",
       description: "Web Site Development",
       image: "/images/NEXT-ELEVEN-AGENCY.png",
@@ -83,13 +107,13 @@ export default function HomePage() {
     },
     {
       title: "Tech Market",
-      description: "Web App Development",
+      description: "Web App Development - E-commerce",
       image: "/images/techmarket-tienda.png",
       link: "#",
     },
     {
       title: "Tu Destino App",
-      description: "Web App Development",
+      description: "Web App Development - E-commerce",
       image: "/images/tudestinoapp.png",
       link: "#",
     },
@@ -239,7 +263,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
             {projects.map((project, index) => (
               <motion.div
-                key={project.title}
+                key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
