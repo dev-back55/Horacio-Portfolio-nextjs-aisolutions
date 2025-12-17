@@ -107,13 +107,13 @@ export default function HomePage() {
     },
     {
       title: "Tech Market",
-      description: "Web App Development - E-commerce",
+      description: "Web App Development - Ecommerce",
       image: "/images/techmarket-tienda.png",
       link: "#",
     },
     {
       title: "Tu Destino App",
-      description: "Web App Development - E-commerce",
+      description: "Web App Development - Ecommerce",
       image: "/images/tudestinoapp.png",
       link: "#",
     },
