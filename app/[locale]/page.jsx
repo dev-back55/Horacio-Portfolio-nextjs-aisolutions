@@ -105,7 +105,7 @@ export default function HomePage() {
     <>
       {/* Main content */}
       <main className="sm:ml-[220px] sm:w-[calc(100%-220px)] p-4 md:p-12 lg:p-16">
-        <div className="w-full">
+        <div className="w-full max-w-7xl mx-auto">
           {/* Available badge */}
           <div className="inline-flex items-center px-3 py-1 rounded-full text-sm mb-8 bg-[#FEFF9F] text-[#18230F] border border-[#72BF78]/30">
             <span className="w-2 h-2 rounded-full bg-[#72BF78] mr-2"></span>
@@ -213,8 +213,9 @@ export default function HomePage() {
                     <Image
                       src={client.logo || "/placeholder.svg"}
                       alt={client.name}
-                      width={620}
-                      height={360}
+                      width={120}
+                      height={70}
+                      priority={index < clients.length}
                       className="h-14 w-auto object-contain"
                     />
                   </div>
