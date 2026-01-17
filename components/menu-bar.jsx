@@ -3,37 +3,7 @@
 import { motion } from "framer-motion"
 import { Home, ContactRound, CircleUserRound, ShoppingBag } from "lucide-react"
 import { useTheme } from "next-themes"
-
-const menuItems = [
-  {
-    icon: <Home className="h-6 w-6" />,
-    label: "Home",
-    href: "/",
-    gradient: "radial-gradient(circle, rgba(59,130,246,0.15) 0%, rgba(37,99,235,0.06) 50%, rgba(29,78,216,0) 100%)",
-    iconColor: "text-blue-500",
-  },
-  {
-    icon: <CircleUserRound className="h-6 w-6" />,
-    label: "About",
-    href: "/about",
-    gradient: "radial-gradient(circle, rgba(249,115,22,0.15) 0%, rgba(234,88,12,0.06) 50%, rgba(194,65,12,0) 100%)",
-    iconColor: "text-orange-500",
-  },
-  {
-    icon: <ContactRound className="h-6 w-6" />,
-    label: "Contact",
-    href: "/contact",
-    gradient: "radial-gradient(circle, rgba(34,197,94,0.15) 0%, rgba(22,163,74,0.06) 50%, rgba(21,128,61,0) 100%)",
-    iconColor: "text-green-500",
-  },
-  {
-    icon: <ShoppingBag className="h-6 w-6" />,
-    label: "Store",
-    href: "https://www.itechrawson.com.ar",
-    gradient: "radial-gradient(circle, rgba(34,197,94,0.15) 0%, rgba(22,163,74,0.06) 50%, rgba(21,128,61,0) 100%)",
-    iconColor: "text-green-500",
-  },
-]
+import { useTranslations, useLocale } from 'next-intl'
 
 const itemVariants = {
   initial: { rotateX: 0, opacity: 1 },
@@ -77,8 +47,49 @@ const sharedTransition = {
 
 export function MenuBar() {
   const { theme } = useTheme()
+  const t = useTranslations('nav')
+  const locale = useLocale()
 
   const isDarkTheme = theme === "dark"
+
+  // Build localized path
+  const getLocalizedPath = (path) => {
+    if (path === '/') {
+      return `/${locale}`;
+    }
+    return `/${locale}${path}`;
+  };
+
+  const menuItems = [
+    {
+      icon: <Home className="h-6 w-6" />,
+      label: t('home'),
+      href: getLocalizedPath('/'),
+      gradient: "radial-gradient(circle, rgba(59,130,246,0.15) 0%, rgba(37,99,235,0.06) 50%, rgba(29,78,216,0) 100%)",
+      iconColor: "text-blue-500",
+    },
+    {
+      icon: <CircleUserRound className="h-6 w-6" />,
+      label: t('about'),
+      href: getLocalizedPath('/about'),
+      gradient: "radial-gradient(circle, rgba(249,115,22,0.15) 0%, rgba(234,88,12,0.06) 50%, rgba(194,65,12,0) 100%)",
+      iconColor: "text-orange-500",
+    },
+    {
+      icon: <ContactRound className="h-6 w-6" />,
+      label: t('contact'),
+      href: getLocalizedPath('/contact'),
+      gradient: "radial-gradient(circle, rgba(34,197,94,0.15) 0%, rgba(22,163,74,0.06) 50%, rgba(21,128,61,0) 100%)",
+      iconColor: "text-green-500",
+    },
+    {
+      icon: <ShoppingBag className="h-6 w-6" />,
+      label: t('store'),
+      href: "https://www.itechrawson.com.ar",
+      gradient: "radial-gradient(circle, rgba(34,197,94,0.15) 0%, rgba(22,163,74,0.06) 50%, rgba(21,128,61,0) 100%)",
+      iconColor: "text-green-500",
+    },
+  ]
 
   return (
     <motion.nav
@@ -146,4 +157,5 @@ export function MenuBar() {
     </motion.nav>
   )
 }
+
 

@@ -6,10 +6,10 @@ import { MapPin, Phone, Send } from "lucide-react";
 import { toast } from "sonner";
 import Link from "next/link";
 import { sendEmailToPaciente } from "@/actions/emailActions";
-import Image from "next/image";
+import { useTranslations } from 'next-intl';
 
 export default function ContactPage() {
-  const [darkMode, setDarkMode] = useState(true);
+  const t = useTranslations('contact');
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -32,13 +32,12 @@ export default function ContactPage() {
       !formState.name.trim() ||
       !formState.subject.trim()
     ) {
-      toast.error("Por favor complete todos los campos");
+      toast.error(t('formError'));
       return;
     }
-    // Here you would normally handle the form submission
     await sendEmailToPaciente(formState);
     console.log(formState);
-    toast.success("Gracias por enviar tu mensaje. En breve te contactare.");
+    toast.success(t('formSuccess'));
     setFormState({
       name: "",
       email: "",
@@ -58,7 +57,7 @@ export default function ContactPage() {
             transition={{ duration: 0.5 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-[#18230F]"
           >
-            Get in Touch
+            {t('title')}
           </motion.h1>
 
           <motion.p
@@ -67,9 +66,7 @@ export default function ContactPage() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-lg mb-12 text-[#27391C]"
           >
-            Have a project in mind or want to discuss how we can work together?
-            Feel free to reach out through any of the channels below or use the
-            contact form.
+            {t('intro')}
           </motion.p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
@@ -96,8 +93,8 @@ export default function ContactPage() {
                   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-2 text-[#18230F]">Email</h3>
-              <p className="mb-2 text-[#27391C]">For project inquiries:</p>
+              <h3 className="text-xl font-bold mb-2 text-[#18230F]">{t('email')}</h3>
+              <p className="mb-2 text-[#27391C]">{t('emailLabel')}</p>
               <Link
                 href="/contact"
                 className="text-[#1F7D53] hover:underline font-medium"
@@ -115,15 +112,15 @@ export default function ContactPage() {
               <div className="mb-4">
                 <Phone size={24} className="text-[#1F7D53]" />
               </div>
-              <h3 className="text-xl font-bold mb-2 text-[#18230F]">Phone</h3>
-              <p className="mb-2 text-[#27391C]">Mon-Fri, 9am-5pm (GMT+3):</p>
+              <h3 className="text-xl font-bold mb-2 text-[#18230F]">{t('phone')}</h3>
+              <p className="mb-2 text-[#27391C]">{t('phoneLabel')}</p>
               <Link
                 href="https://calendar.app.google/qB7HtErZcYHQXboN7"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#1F7D53] hover:underline font-medium"
               >
-                Schedule Call
+                {t('scheduleCall')}
               </Link>
             </motion.div>
 
@@ -137,11 +134,11 @@ export default function ContactPage() {
                 <MapPin size={24} className="text-[#1F7D53]" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-[#18230F]">
-                Location
+                {t('location')}
               </h3>
-              <p className="mb-2 text-[#27391C]">Based in:</p>
+              <p className="mb-2 text-[#27391C]">{t('locationLabel')}</p>
               <p className="text-[#18230F]">
-                Rawson, Chubut Patagonia Argentina
+                {t('locationValue')}
               </p>
             </motion.div>
           </div>
@@ -153,7 +150,7 @@ export default function ContactPage() {
             className="p-8 rounded-lg bg-white shadow-sm border border-[#72BF78]/20 mb-16"
           >
             <h2 className="text-2xl font-bold mb-6 text-[#18230F]">
-              Send a Message
+              {t('formTitle')}
             </h2>
             <form onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -162,7 +159,7 @@ export default function ContactPage() {
                     htmlFor="name"
                     className="block mb-2 text-sm font-medium text-[#27391C]"
                   >
-                    Your Name
+                    {t('formName')}
                   </label>
                   <input
                     type="text"
@@ -179,7 +176,7 @@ export default function ContactPage() {
                     htmlFor="email"
                     className="block mb-2 text-sm font-medium text-[#27391C]"
                   >
-                    Your Email
+                    {t('formEmail')}
                   </label>
                   <input
                     type="email"
@@ -197,7 +194,7 @@ export default function ContactPage() {
                   htmlFor="subject"
                   className="block mb-2 text-sm font-medium text-[#27391C]"
                 >
-                  Subject
+                  {t('formSubject')}
                 </label>
                 <input
                   type="text"
@@ -214,7 +211,7 @@ export default function ContactPage() {
                   htmlFor="message"
                   className="block mb-2 text-sm font-medium text-[#27391C]"
                 >
-                  Message
+                  {t('formMessage')}
                 </label>
                 <textarea
                   id="message"
@@ -230,7 +227,7 @@ export default function ContactPage() {
                 type="submit"
                 className="px-6 py-3 rounded-md font-medium flex items-center bg-[#72BF78] text-white hover:bg-[#72BF78]/90 transition-colors"
               >
-                Send Message
+                {t('formSubmit')}
                 <Send size={16} className="ml-2" />
               </button>
             </form>
@@ -243,7 +240,7 @@ export default function ContactPage() {
             className="text-center"
           >
             <h3 className="text-xl font-bold mb-4 text-[#18230F]">
-              Connect on Social Media
+              {t('socialTitle')}
             </h3>
             <div className="flex justify-center space-x-6">
               <Link

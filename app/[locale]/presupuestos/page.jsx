@@ -1,4 +1,3 @@
-// app/quote/page.js
 'use client';
 
 import { useState } from 'react';

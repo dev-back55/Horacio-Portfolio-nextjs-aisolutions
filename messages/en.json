@@ -1,0 +1,224 @@
+{
+    "metadata": {
+        "title": "Horacio Abitú | Web Developer",
+        "description": "Portfolio of Horacio Abitú, a creative developer building exceptional digital experiences."
+    },
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "contact": "Contact",
+        "store": "Store"
+    },
+    "sidebar": {
+        "role": "Web Developer &\nSolutions Provider"
+    },
+    "languageSelector": {
+        "label": "Language",
+        "es": "Español",
+        "en": "English"
+    },
+    "home": {
+        "available": "Available for work",
+        "greeting": "Hello! I'm Horacio",
+        "subtitle": "I'm using AI to provide solutions or automations within your website, or creating new web apps with AI.",
+        "location": "Currently in Rawson, Argentina",
+        "description": "I'm focused on creating websites and apps that are not only attractive but also effective tools for selling online. We integrate cutting-edge AI technology into your web applications to provide customized solutions and automations. By leveraging AI tools, my straightforward approach ensures a rapid launch and traffic generation to get your first customers and achieve the desired conversions.",
+        "aboutButton": "About",
+        "bookCall": "Book Call",
+        "poweredWork": "Powered My Work",
+        "selectedWork": "Selected Work"
+    },
+    "projects": {
+        "rawsonChubut": {
+            "title": "Rawson Chubut Online",
+            "description": "Web App Development - Founder - Owner"
+        },
+        "itech": {
+            "title": "iTech Informática Rawson",
+            "description": "Web App Development - Founder - Owner"
+        },
+        "camara": {
+            "title": "Cámara de Industria, Comercio, Producción y Turismo de Rawson",
+            "description": "Web App Development - Dashboard"
+        },
+        "camaraCobranzas": {
+            "title": "Cámara de Industria, Comercio, Producción y Turismo de Rawson",
+            "description": "Web App Development - Cobranzas"
+        },
+        "flama": {
+            "title": "Flama Innovación",
+            "description": "Web Site Development - Web Design"
+        },
+        "historias": {
+            "title": "Historias Clínicas",
+            "description": "Web App Development - SaaS"
+        },
+        "radio": {
+            "title": "Radio FM Bahía Engaño",
+            "description": "Web Site Development"
+        },
+        "cecilia": {
+            "title": "Cecilia Maria Aliaga",
+            "description": "Web Development - Portfolio"
+        },
+        "marina": {
+            "title": "Marina R. Griffiths",
+            "description": "Web Development - Portfolio"
+        },
+        "nextEleven": {
+            "title": "Next Eleven Agency",
+            "description": "Web Site Development"
+        },
+        "techMarket": {
+            "title": "Tech Market",
+            "description": "Web App Development - Ecommerce"
+        },
+        "tuDestino": {
+            "title": "Tu Destino App",
+            "description": "Web App Development - Ecommerce"
+        },
+        "fmApp": {
+            "title": "FM Bahía Engaño App",
+            "description": "Android App Development"
+        },
+        "junior": {
+            "title": "Junior Developers Directory",
+            "description": "Web App Development"
+        },
+        "copaAmerica": {
+            "title": "Copa America 2024",
+            "description": "Web App Development"
+        },
+        "worldCup": {
+            "title": "World Cup Qatar 2022",
+            "description": "Web Development - PWA"
+        }
+    },
+    "about": {
+        "title": "About Me",
+        "intro1": "My method integrates experience and technical skills with marketing strategies to develop websites and applications that not only stand out for their design, but are also optimized to convert visitors into loyal customers.",
+        "intro2": "I am committed to using the most advanced new AI technologies to automate and streamline processes, increase efficiency, and deliver high-quality results in less time.",
+        "intro3": "My mission is to support you in the rapid launch of your business, creating excellent digital products that generate real impact and value in just weeks, rather than months.",
+        "downloadResume": "Download Resume",
+        "servicesTitle": "Services",
+        "services": {
+            "webDev": {
+                "title": "Web Development",
+                "description": "Custom websites and web applications built with modern technologies for optimal performance and user experience."
+            },
+            "webDesign": {
+                "title": "Web Design",
+                "description": "Intuitive and engaging user interfaces that enhance user experience and drive conversions."
+            },
+            "digitalStructure": {
+                "title": "Digital Structure",
+                "description": "Design an intuitive and functional web architecture, optimizing all elements of your digital ecosystem."
+            },
+            "store": {
+                "title": "Service & Store",
+                "description": "Consulting, professional computer technical service, and IT Store, with quality and prices, and over 30 years of experience in the field."
+            }
+        },
+        "toolsTitle": "Tools & Technologies",
+        "skillsTitle": "Skills & Expertise",
+        "skills": {
+            "webDev": "Web Development",
+            "itSolutions": "IT Solutions Provider",
+            "digitalStructure": "Digital Structure",
+            "projectManagement": "Project Management",
+            "technicalSupport": "Computer Technical Support"
+        },
+        "experienceTitle": "Experience",
+        "experience": {
+            "freelance": {
+                "year": "2022 - Present",
+                "position": "Freelance Web Developer, IT Consultant and Computer Technical Solutions",
+                "description": "Working with startups and businesses to build effective online presences and solid technical foundations."
+            },
+            "rawson": {
+                "year": "2024 - Present",
+                "position": "Founder and CEO of Rawson Chubut Online",
+                "description": "Founder and developer of the website rawsonchubut.com.ar. This project was born as a tribute to my hometown, with the goal of gathering all possible information for travelers or anyone who wants to discover Rawson, the heart of Argentine Patagonia."
+            },
+            "itech": {
+                "year": "2024 - Present",
+                "position": "Founder and CEO of iTech Informatica Rawson",
+                "description": "Founder and developer of the website itechrawson.com.ar. An online IT product store, with the goal of providing my Rawson neighbors with the highest quality IT products and services, utilizing my extensive experience in the field."
+            },
+            "computerStore": {
+                "year": "2008 - 2016",
+                "position": "Founder and Seo of Computer Service Store",
+                "description": "Seo and manager of Computer Service Store, owner."
+            },
+            "projectLeader": {
+                "year": "2006 - 2007",
+                "position": "Project Leader and SysAdmin",
+                "description": "Project Leader IBM xSeries Tower Servers and SysAdmin to Banco del Chubut S.A."
+            },
+            "softwareDev1": {
+                "year": "1991 - 1997",
+                "position": "Software Developer",
+                "description": "Developed and implemented management software systems to Banco del Chubut S.A."
+            },
+            "softwareDev2": {
+                "year": "1987 - 1991",
+                "position": "Software Developer",
+                "description": "Developed and implemented management software systems to Catastro y Geodesia of Chubut."
+            }
+        },
+        "educationTitle": "Education",
+        "education": {
+            "analyst": {
+                "degree": "Programmer Analyst",
+                "institution": "UNPSJB",
+                "year": "1985 - 1987",
+                "description": "Specialized in software development and system analysis"
+            },
+            "henry": {
+                "degree": "Full Stack Web Development",
+                "institution": "Henry Academy",
+                "year": "2022",
+                "description": "Graduated with expertise in fullstack software development and web technologies"
+            },
+            "noCountry": {
+                "degree": "Development Expert Training",
+                "institution": "No Country Academy",
+                "year": "2023",
+                "description": "Comprehensive training in fullstack software development, design patterns, Scrum and Agile tecniques and analytics"
+            }
+        },
+        "ctaTitle": "Ready to work together?",
+        "ctaDescription": "I'm currently available for freelance projects and consulting work.",
+        "ctaButton": "Get in touch"
+    },
+    "contact": {
+        "title": "Get in Touch",
+        "intro": "Have a project in mind or want to discuss how we can work together? Feel free to reach out through any of the channels below or use the contact form.",
+        "email": "Email",
+        "emailLabel": "For project inquiries:",
+        "phone": "Phone",
+        "phoneLabel": "Mon-Fri, 9am-5pm (GMT+3):",
+        "scheduleCall": "Schedule Call",
+        "location": "Location",
+        "locationLabel": "Based in:",
+        "locationValue": "Rawson, Chubut Patagonia Argentina",
+        "formTitle": "Send a Message",
+        "formName": "Your Name",
+        "formEmail": "Your Email",
+        "formSubject": "Subject",
+        "formMessage": "Message",
+        "formSubmit": "Send Message",
+        "formSuccess": "Thank you for your message. I'll get back to you soon.",
+        "formError": "Please fill in all fields",
+        "socialTitle": "Connect on Social Media"
+    },
+    "footer": {
+        "role": "Web developer and Solutions Provider.",
+        "quickLinks": "Quick Links",
+        "contact": "Contact",
+        "store": "Store",
+        "storeDescription": "Computer technical service and IT store with the highest quality and over 30 years of experience.",
+        "scheduleCall": "Schedule Call",
+        "rights": "All rights reserved."
+    }
+}

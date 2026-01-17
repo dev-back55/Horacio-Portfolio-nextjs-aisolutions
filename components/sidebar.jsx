@@ -1,17 +1,24 @@
 "use client"
 
-//import { useState } from "react"
 import { Home, Info, Mail, Store } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { LinkedIn, Twitter } from "@/components/icons"
-
-//import ThemeToggle from "./themeToggle";
+import { useTranslations, useLocale } from 'next-intl'
+import { LanguageSelector } from "./language-selector"
 
 export function Sidebar() {
- // const [darkMode, setDarkMode] = useState(true)
+  const t = useTranslations('nav')
+  const tSidebar = useTranslations('sidebar')
+  const locale = useLocale()
 
- // const toggleDarkMode = () => setDarkMode(!darkMode)
+  // Build localized path - Spanish uses /es prefix, English uses /en prefix
+  const getLocalizedPath = (path) => {
+    if (path === '/') {
+      return `/${locale}`;
+    }
+    return `/${locale}${path}`;
+  };
 
   return (
     <aside className="w-[220px] hidden fixed top-0 left-0 h-full sm:flex flex-col bg-[#A0D683] border-r border-[#72BF78]/30">
@@ -26,9 +33,8 @@ export function Sidebar() {
           />
         </div>
         <h2 className="text-lg font-semibold text-center text-[#18230F]">Horacio Abitú</h2>
-        <p className="text-sm text-center text-[#27391C]">
-          Web Developer &<br />
-          Solutions Provider
+        <p className="text-sm text-center text-[#27391C] whitespace-pre-line">
+          {tSidebar('role')}
         </p>
       </div>
 
@@ -53,27 +59,27 @@ export function Sidebar() {
         <ul className="space-y-1">
           <li>
             <Link
-              href="/"
+              href={getLocalizedPath('/')}
               className="flex items-center space-x-3 px-4 py-2.5 rounded-md"
             >
               <Home size={18} />
-              <span>Home</span>
+              <span>{t('home')}</span>
             </Link>
           </li>
           <li>
             <Link
-              href="/about"
+              href={getLocalizedPath('/about')}
               className="flex items-center space-x-3 px-4 py-2.5 rounded-md">
               <Info size={18} />
-              <span>About</span>
+              <span>{t('about')}</span>
             </Link>
           </li>
           <li>
             <Link
-              href="/contact"
+              href={getLocalizedPath('/contact')}
               className="flex items-center space-x-3 px-4 py-2.5 rounded-md">
               <Mail size={18} />
-              <span>Contact</span>
+              <span>{t('contact')}</span>
             </Link>
           </li>
           <li>
@@ -81,16 +87,18 @@ export function Sidebar() {
               href="https://www.itechrawson.com.ar" target="_blank" rel="noopener noreferrer"
               className="flex items-center space-x-3 px-4 py-2.5 rounded-md">
               <Store size={18} />
-              <span>Store</span>
+              <span>{t('store')}</span>
             </Link>
           </li>
         </ul>
       </nav>
 
-      {/*<div className="flex flex-col items-center justify-end flex-1 p-4">
-        <ThemeToggle />
-      </div>*/}
+      {/* Language Selector */}
+      <div className="px-4 py-4 border-t border-[#72BF78]/30">
+        <LanguageSelector />
+      </div>
     </aside>
   )
 }
+
 

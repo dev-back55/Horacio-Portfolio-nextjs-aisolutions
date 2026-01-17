@@ -6,9 +6,21 @@ import { Mail, MapPin, Phone, Twitter } from "lucide-react"
 import Link from "next/link"
 import { LinkedIn } from "@/components/icons"
 import { Button } from "@/components/ui/button"
+import { useTranslations, useLocale } from 'next-intl'
 
 export function Footer({ darkMode }) {
+  const t = useTranslations('footer')
+  const tNav = useTranslations('nav')
+  const locale = useLocale()
   const currentYear = new Date().getFullYear()
+
+  // Build localized path
+  const getLocalizedPath = (path) => {
+    if (path === '/') {
+      return `/${locale}`;
+    }
+    return `/${locale}${path}`;
+  };
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -29,7 +41,6 @@ export function Footer({ darkMode }) {
       toast.error("Por favor complete todos los campos")
       return
     }
-    // Here you would normally handle the form submission
     await sendEmailToPaciente(formState)
     console.log(formState)
     toast.success("Gracias por enviar tu mensaje. En breve te contactare.")
@@ -47,7 +58,7 @@ export function Footer({ darkMode }) {
           <div>
             <h3 className="text-lg font-bold mb-4 text-[#18230F]">Horacio Abitú</h3>
             <p className="mb-4 text-[#27391C]">
-              Web developer and Solutions Provider.
+              {t('role')}
             </p>
             <div className="flex space-x-4">
               <button
@@ -69,26 +80,21 @@ export function Footer({ darkMode }) {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-bold mb-4 text-[#18230F]">Quick Links</h3>
+            <h3 className="text-lg font-bold mb-4 text-[#18230F]">{t('quickLinks')}</h3>
             <ul className="space-y-2 text-[#27391C]">
               <li>
-                <Link href="/" className="hover:text-[#1F7D53] transition-colors">
-                  Home
+                <Link href={getLocalizedPath('/')} className="hover:text-[#1F7D53] transition-colors">
+                  {tNav('home')}
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-[#1F7D53] transition-colors">
-                  About
+                <Link href={getLocalizedPath('/about')} className="hover:text-[#1F7D53] transition-colors">
+                  {tNav('about')}
                 </Link>
               </li>
-              {/*<li>
-                <Link href="/blog" className="hover:text-[#1F7D53] transition-colors">
-                  Blog
-                </Link>
-              </li>*/}
               <li>
-                <Link href="/contact" className="hover:text-[#1F7D53] transition-colors">
-                  Contact
+                <Link href={getLocalizedPath('/contact')} className="hover:text-[#1F7D53] transition-colors">
+                  {tNav('contact')}
                 </Link>
               </li>
             </ul>
@@ -96,7 +102,7 @@ export function Footer({ darkMode }) {
 
           {/* Contact */}
           <div>
-            <h3 className="text-lg font-bold mb-4 text-[#18230F]">Contact</h3>
+            <h3 className="text-lg font-bold mb-4 text-[#18230F]">{t('contact')}</h3>
             <ul className="space-y-3 text-[#27391C]">
               <li className="flex items-center">
                 <Mail size={16} className="mr-2 text-[#1F7D53]" />
@@ -107,7 +113,7 @@ export function Footer({ darkMode }) {
               <li className="flex items-center">
                 <Phone size={16} className="mr-2 text-[#1F7D53]" />
                 <Link href="https://calendar.app.google/qB7HtErZcYHQXboN7" target="_blank" rel="noopener noreferrer" className="hover:text-[#1F7D53] transition-colors">
-                  Schedule Call
+                  {t('scheduleCall')}
                 </Link>
               </li>
               <li className="flex items-start">
@@ -120,47 +126,19 @@ export function Footer({ darkMode }) {
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-4 text-[#18230F]">Store</h3>
+            <h3 className="text-lg font-bold mb-4 text-[#18230F]">{t('store')}</h3>
             <Link href="https://www.itechrawson.com.ar" target="_blank" rel="noopener noreferrer" className="hover:text-[#1F7D53] transition-colors">
-            Computer technical service and IT store with the highest quality and over 30 years of experience.
+            {t('storeDescription')}
             </Link>
           </div>  
-
-          {/* Newsletter 
-          <div>
-            <h3 className="text-lg font-bold mb-4 text-[#18230F]">Newsletter</h3>
-            <p className="mb-4 text-[#27391C]">Subscribe to get the latest updates and news.</p>
-            <form className="flex flex-col" onSubmit={handleSubmit}>
-              <input
-                type="string"
-                id="name"
-                name="name"
-                value={formState.name}
-                onChange={handleChange}
-                placeholder="Your Name"
-                className="flex-1 px-2 py-1 rounded-l-md bg-white border border-[#72BF78]/30 text-[#18230F] focus:outline-none"
-              />
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formState.email}
-                onChange={handleChange}
-                placeholder="Your email"
-                className="flex-1 px-2 py-1 rounded-l-md bg-white border border-[#72BF78]/30 text-[#18230F] focus:outline-none"
-              />
-              <Button type="submit" className="px-4 py-2 rounded-r-md font-medium bg-[#72BF78] text-white">
-                Subscribe
-              </Button>
-            </form>
-          </div>*/}
         </div> 
 
         <div className="mt-10 pt-6 border-t border-[#72BF78]/30 text-center text-[#27391C]">
-          <p>© {currentYear} Horacio Abitú. All rights reserved.</p>
+          <p>© {currentYear} Horacio Abitú. {t('rights')}</p>
         </div>
       </div>
     </footer>
   )
 }
+
 

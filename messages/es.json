@@ -1,0 +1,224 @@
+{
+    "metadata": {
+        "title": "Horacio Abitú | Desarrollador Web",
+        "description": "Portfolio de Horacio Abitú, un desarrollador creativo construyendo experiencias digitales excepcionales."
+    },
+    "nav": {
+        "home": "Inicio",
+        "about": "Sobre Mí",
+        "contact": "Contacto",
+        "store": "Tienda"
+    },
+    "sidebar": {
+        "role": "Desarrollador Web &\nProveedor de Soluciones"
+    },
+    "languageSelector": {
+        "label": "Idioma",
+        "es": "Español",
+        "en": "English"
+    },
+    "home": {
+        "available": "Disponible para trabajar",
+        "greeting": "¡Hola! Soy Horacio",
+        "subtitle": "Uso IA para proporcionar soluciones o automatizaciones en tu sitio web, o creando nuevas aplicaciones web con IA.",
+        "location": "Actualmente en Rawson, Argentina",
+        "description": "Me enfoco en crear sitios web y aplicaciones que no solo son atractivos sino también herramientas efectivas para vender en línea. Integramos tecnología de IA de vanguardia en tus aplicaciones web para proporcionar soluciones y automatizaciones personalizadas. Aprovechando herramientas de IA, mi enfoque directo asegura un lanzamiento rápido y generación de tráfico para conseguir tus primeros clientes y lograr las conversiones deseadas.",
+        "aboutButton": "Sobre Mí",
+        "bookCall": "Agendar Llamada",
+        "poweredWork": "Impulsan Mi Trabajo",
+        "selectedWork": "Trabajos Seleccionados"
+    },
+    "projects": {
+        "rawsonChubut": {
+            "title": "Rawson Chubut Online",
+            "description": "Desarrollo Web App - Fundador - Propietario"
+        },
+        "itech": {
+            "title": "iTech Informática Rawson",
+            "description": "Desarrollo Web App - Fundador - Propietario"
+        },
+        "camara": {
+            "title": "Cámara de Industria, Comercio, Producción y Turismo de Rawson",
+            "description": "Desarrollo Web App - Dashboard"
+        },
+        "camaraCobranzas": {
+            "title": "Cámara de Industria, Comercio, Producción y Turismo de Rawson",
+            "description": "Desarrollo Web App - Cobranzas"
+        },
+        "flama": {
+            "title": "Flama Innovación",
+            "description": "Desarrollo Sitio Web - Diseño Web"
+        },
+        "historias": {
+            "title": "Historias Clínicas",
+            "description": "Desarrollo Web App - SaaS"
+        },
+        "radio": {
+            "title": "Radio FM Bahía Engaño",
+            "description": "Desarrollo Sitio Web"
+        },
+        "cecilia": {
+            "title": "Cecilia Maria Aliaga",
+            "description": "Desarrollo Web - Portfolio"
+        },
+        "marina": {
+            "title": "Marina R. Griffiths",
+            "description": "Desarrollo Web - Portfolio"
+        },
+        "nextEleven": {
+            "title": "Next Eleven Agency",
+            "description": "Desarrollo Sitio Web"
+        },
+        "techMarket": {
+            "title": "Tech Market",
+            "description": "Desarrollo Web App - Ecommerce"
+        },
+        "tuDestino": {
+            "title": "Tu Destino App",
+            "description": "Desarrollo Web App - Ecommerce"
+        },
+        "fmApp": {
+            "title": "FM Bahía Engaño App",
+            "description": "Desarrollo App Android"
+        },
+        "junior": {
+            "title": "Directorio Junior Developers",
+            "description": "Desarrollo Web App"
+        },
+        "copaAmerica": {
+            "title": "Copa América 2024",
+            "description": "Desarrollo Web App"
+        },
+        "worldCup": {
+            "title": "Mundial Qatar 2022",
+            "description": "Desarrollo Web - PWA"
+        }
+    },
+    "about": {
+        "title": "Sobre Mí",
+        "intro1": "Mi método integra experiencia y habilidades técnicas con estrategias de marketing para desarrollar sitios web y aplicaciones que no solo destacan por su diseño, sino que también están optimizados para convertir visitantes en clientes fieles.",
+        "intro2": "Estoy comprometido con el uso de las nuevas tecnologías de IA más avanzadas para automatizar y agilizar procesos, aumentar la eficiencia y entregar resultados de alta calidad en menos tiempo.",
+        "intro3": "Mi misión es apoyarte en el lanzamiento rápido de tu negocio, creando excelentes productos digitales que generen impacto real y valor en semanas, en lugar de meses.",
+        "downloadResume": "Descargar CV",
+        "servicesTitle": "Servicios",
+        "services": {
+            "webDev": {
+                "title": "Desarrollo Web",
+                "description": "Sitios web personalizados y aplicaciones web construidas con tecnologías modernas para un rendimiento óptimo y experiencia de usuario."
+            },
+            "webDesign": {
+                "title": "Diseño Web",
+                "description": "Interfaces de usuario intuitivas y atractivas que mejoran la experiencia del usuario e impulsan las conversiones."
+            },
+            "digitalStructure": {
+                "title": "Estructura Digital",
+                "description": "Diseño de una arquitectura web intuitiva y funcional, optimizando todos los elementos de tu ecosistema digital."
+            },
+            "store": {
+                "title": "Servicio y Tienda",
+                "description": "Consultoría, servicio técnico profesional de computación y Tienda IT, con calidad y precios, y más de 30 años de experiencia en el rubro."
+            }
+        },
+        "toolsTitle": "Herramientas y Tecnologías",
+        "skillsTitle": "Habilidades y Experiencia",
+        "skills": {
+            "webDev": "Desarrollo Web",
+            "itSolutions": "Proveedor de Soluciones IT",
+            "digitalStructure": "Estructura Digital",
+            "projectManagement": "Gestión de Proyectos",
+            "technicalSupport": "Soporte Técnico de Computación"
+        },
+        "experienceTitle": "Experiencia",
+        "experience": {
+            "freelance": {
+                "year": "2022 - Presente",
+                "position": "Desarrollador Web Freelance, Consultor IT y Soluciones Técnicas de Computación",
+                "description": "Trabajando con startups y negocios para construir presencias en línea efectivas y sólidas bases técnicas."
+            },
+            "rawson": {
+                "year": "2024 - Presente",
+                "position": "Fundador y CEO de Rawson Chubut Online",
+                "description": "Fundador y desarrollador del sitio web rawsonchubut.com.ar. Este proyecto nació como un tributo a mi ciudad natal, con el objetivo de reunir toda la información posible para viajeros o cualquiera que quiera descubrir Rawson, el corazón de la Patagonia Argentina."
+            },
+            "itech": {
+                "year": "2024 - Presente",
+                "position": "Fundador y CEO de iTech Informática Rawson",
+                "description": "Fundador y desarrollador del sitio web itechrawson.com.ar. Una tienda online de productos IT, con el objetivo de proporcionar a mis vecinos de Rawson productos y servicios IT de la más alta calidad, utilizando mi amplia experiencia en el rubro."
+            },
+            "computerStore": {
+                "year": "2008 - 2016",
+                "position": "Fundador y CEO de Tienda de Servicio de Computación",
+                "description": "CEO y gerente de Tienda de Servicio de Computación, propietario."
+            },
+            "projectLeader": {
+                "year": "2006 - 2007",
+                "position": "Líder de Proyecto y SysAdmin",
+                "description": "Líder de Proyecto de Servidores IBM xSeries Tower y SysAdmin para Banco del Chubut S.A."
+            },
+            "softwareDev1": {
+                "year": "1991 - 1997",
+                "position": "Desarrollador de Software",
+                "description": "Desarrollé e implementé sistemas de software de gestión para Banco del Chubut S.A."
+            },
+            "softwareDev2": {
+                "year": "1987 - 1991",
+                "position": "Desarrollador de Software",
+                "description": "Desarrollé e implementé sistemas de software de gestión para Catastro y Geodesia del Chubut."
+            }
+        },
+        "educationTitle": "Educación",
+        "education": {
+            "analyst": {
+                "degree": "Analista Programador",
+                "institution": "UNPSJB",
+                "year": "1985 - 1987",
+                "description": "Especializado en desarrollo de software y análisis de sistemas"
+            },
+            "henry": {
+                "degree": "Desarrollo Web Full Stack",
+                "institution": "Henry Academy",
+                "year": "2022",
+                "description": "Graduado con experiencia en desarrollo de software fullstack y tecnologías web"
+            },
+            "noCountry": {
+                "degree": "Entrenamiento de Experto en Desarrollo",
+                "institution": "No Country Academy",
+                "year": "2023",
+                "description": "Entrenamiento integral en desarrollo de software fullstack, patrones de diseño, técnicas Scrum y Agile y analíticas"
+            }
+        },
+        "ctaTitle": "¿Listo para trabajar juntos?",
+        "ctaDescription": "Actualmente estoy disponible para proyectos freelance y trabajo de consultoría.",
+        "ctaButton": "Ponerse en contacto"
+    },
+    "contact": {
+        "title": "Contacto",
+        "intro": "¿Tenés un proyecto en mente o querés discutir cómo podemos trabajar juntos? Sentite libre de contactarme a través de cualquiera de los canales de abajo o usá el formulario de contacto.",
+        "email": "Email",
+        "emailLabel": "Para consultas de proyectos:",
+        "phone": "Teléfono",
+        "phoneLabel": "Lun-Vie, 9am-5pm (GMT-3):",
+        "scheduleCall": "Agendar Llamada",
+        "location": "Ubicación",
+        "locationLabel": "Ubicado en:",
+        "locationValue": "Rawson, Chubut Patagonia Argentina",
+        "formTitle": "Enviar un Mensaje",
+        "formName": "Tu Nombre",
+        "formEmail": "Tu Email",
+        "formSubject": "Asunto",
+        "formMessage": "Mensaje",
+        "formSubmit": "Enviar Mensaje",
+        "formSuccess": "Gracias por enviar tu mensaje. En breve te contactaré.",
+        "formError": "Por favor completá todos los campos",
+        "socialTitle": "Conectar en Redes Sociales"
+    },
+    "footer": {
+        "role": "Desarrollador web y Proveedor de Soluciones.",
+        "quickLinks": "Enlaces Rápidos",
+        "contact": "Contacto",
+        "store": "Tienda",
+        "storeDescription": "Servicio técnico de computación y tienda IT con la más alta calidad y más de 30 años de experiencia.",
+        "scheduleCall": "Agendar Llamada",
+        "rights": "Todos los derechos reservados."
+    }
+}
