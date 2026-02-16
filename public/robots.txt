@@ -1,0 +1,66 @@
+# robots.txt para horacioabitu.com.ar
+# Permite el acceso de crawlers de IAs y motores de búsqueda
+
+# Permitir acceso a Claude (Anthropic)
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Permitir acceso a ChatGPT (OpenAI)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Permitir acceso a Google Bard/Gemini
+User-agent: Google-Extended
+Allow: /
+
+# Permitir acceso a Bing/Microsoft
+User-agent: Bingbot
+Allow: /
+
+# Permitir acceso a otros crawlers de IA
+User-agent: PerplexityBot
+Allow: /
+
+#User-agent: YouBot
+#Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Permitir acceso a motores de búsqueda principales
+User-agent: Googlebot
+Allow: /
+
+#User-agent: Slurp
+#Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+#User-agent: Baiduspider
+#Allow: /
+
+#User-agent: YandexBot
+#Allow: /
+
+# Regla general para todos los demás bots
+#User-agent: *
+#Allow: /
+
+# Opcional: Bloquear carpetas específicas si las tienes
+# Descomenta y ajusta según tu estructura
+# Disallow: /admin/
+# Disallow: /private/
+# Disallow: /temp/
+
+# Sitemap (ajusta la URL si tienes un sitemap)
+Sitemap: https://www.horacioabitu.com.ar/sitemap.xml
