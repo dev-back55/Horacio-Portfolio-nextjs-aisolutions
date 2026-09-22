@@ -1,6 +1,6 @@
 "use client"
 
-import { Home, Info, Mail, Store } from "lucide-react"
+import { Home, Info, Mail, Store, IdCard } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { LinkedIn, Twitter } from "@/components/icons"
@@ -80,6 +80,14 @@ export function Sidebar() {
               className="flex items-center space-x-3 px-4 py-2.5 rounded-md">
               <Mail size={18} />
               <span>{t('contact')}</span>
+            </Link>
+          </li>
+          <li>
+            <Link
+              href={getLocalizedPath('/tarjeta')}
+              className="flex items-center space-x-3 px-4 py-2.5 rounded-md">
+              <IdCard size={18} />
+              <span>{t('tarjeta')}</span>
             </Link>
           </li>
           <li>

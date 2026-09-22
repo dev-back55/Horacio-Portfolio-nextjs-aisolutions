@@ -1,0 +1,363 @@
+.container {
+  font-family: 'DM Sans', sans-serif;
+  background: #0A1628;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 20% 20%, rgba(0, 212, 180, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 60% at 80% 80%, rgba(0, 168, 150, 0.06) 0%, transparent 60%),
+    #0A1628;
+  z-index: 0;
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 420px;
+  background: linear-gradient(145deg, #112240, #0A1628);
+  border: 1px solid rgba(0, 212, 180, 0.2);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow:
+    0 40px 80px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(0, 212, 180, 0.1) inset,
+    0 1px 0 rgba(0, 212, 180, 0.3) inset;
+  animation: fadeUp 0.7s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cardAccent {
+  height: 4px;
+  background: linear-gradient(90deg, #00A896, #00D4B4, transparent);
+}
+
+.cardHeader {
+  padding: 32px 32px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid rgba(0, 212, 180, 0.1);
+  position: relative;
+}
+
+.shareBtn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(0, 212, 180, 0.1);
+  border: 1px solid rgba(0, 212, 180, 0.2);
+  color: #00D4B4;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.shareBtn:hover {
+  background: rgba(0, 212, 180, 0.2);
+  transform: scale(1.05);
+}
+
+.avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00A896, #00D4B4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 26px;
+  color: #0A1628;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 3px rgba(0, 212, 180, 0.3), 0 0 20px rgba(0, 212, 180, 0.2);
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 3px rgba(0, 212, 180, 0.3), 0 0 20px rgba(0, 212, 180, 0.2);
+  }
+
+  50% {
+    box-shadow: 0 0 0 6px rgba(0, 212, 180, 0.15), 0 0 30px rgba(0, 212, 180, 0.3);
+  }
+}
+
+.headerInfo h1 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  color: #F0F8FF;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+.headerInfo .title {
+  font-size: 12px;
+  color: #00D4B4;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.headerInfo .location {
+  font-size: 12px;
+  color: #8BA3C1;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cardBody {
+  padding: 20px 32px;
+}
+
+.sectionLabel {
+  font-size: 10px;
+  color: #8BA3C1;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.tag {
+  background: rgba(0, 212, 180, 0.08);
+  border: 1px solid rgba(0, 212, 180, 0.2);
+  color: #00D4B4;
+  font-size: 11px;
+  padding: 5px 12px;
+  border-radius: 100px;
+  font-weight: 500;
+  transition: all 0.2s;
+  cursor: default;
+}
+
+.tag:hover {
+  background: rgba(0, 212, 180, 0.15);
+  border-color: rgba(0, 212, 180, 0.4);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.stat {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+}
+
+.statNum {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  color: #00D4B4;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 10px;
+  color: #8BA3C1;
+  margin-top: 4px;
+  line-height: 1.3;
+}
+
+.aiBadge {
+  background: linear-gradient(135deg, rgba(0, 212, 180, 0.12), rgba(0, 168, 150, 0.08));
+  border: 1px solid rgba(0, 212, 180, 0.25);
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+}
+
+.aiIcon {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #00A896, #00D4B4);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.aiText {
+  display: flex;
+  flex-direction: column;
+}
+
+.aiText strong {
+  display: block;
+  font-size: 12px;
+  color: #00D4B4;
+  font-weight: 600;
+  font-family: 'Syne', sans-serif;
+}
+
+.aiText span {
+  font-size: 11px;
+  color: #8BA3C1;
+  line-height: 1.4;
+  margin-top: 2px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btnPrimary {
+  background: linear-gradient(135deg, #00A896, #00D4B4);
+  color: #0A1628;
+  font-weight: 700;
+  font-family: 'Syne', sans-serif;
+  box-shadow: 0 4px 20px rgba(0, 212, 180, 0.3);
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 212, 180, 0.4);
+}
+
+.btnSecondary {
+  background: rgba(255, 255, 255, 0.04);
+  color: #F0F8FF;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btnSecondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(0, 212, 180, 0.3);
+  color: #00D4B4;
+  transform: translateY(-1px);
+}
+
+.btnIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 15px;
+}
+
+.btnPrimary .btnIcon {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.btnSecondary .btnIcon {
+  background: rgba(0, 212, 180, 0.1);
+}
+
+.btnText {
+  flex: 1;
+  text-align: left;
+}
+
+.btnLabel {
+  display: block;
+  font-size: 10px;
+  opacity: 0.7;
+  font-weight: 400;
+  font-family: 'DM Sans', sans-serif;
+  margin-bottom: 1px;
+}
+
+.cardFooter {
+  padding: 16px 32px;
+  border-top: 1px solid rgba(0, 212, 180, 0.1);
+  text-align: center;
+}
+
+.cardFooter a {
+  font-size: 12px;
+  color: #00D4B4;
+  text-decoration: none;
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.cardFooter a:hover {
+  opacity: 1;
+}
+
+.shareHint {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 11px;
+  color: rgba(139, 163, 193, 0.5);
+  animation: fadeUp 0.7s 0.3s ease both;
+}

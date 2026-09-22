@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Home, ContactRound, CircleUserRound, ShoppingBag } from "lucide-react"
+import { Home, ContactRound, CircleUserRound, ShoppingBag, IdCard } from "lucide-react"
 import { useTheme } from "next-themes"
 import { useTranslations, useLocale } from 'next-intl'
 
@@ -81,6 +81,13 @@ export function MenuBar() {
       href: getLocalizedPath('/contact'),
       gradient: "radial-gradient(circle, rgba(34,197,94,0.15) 0%, rgba(22,163,74,0.06) 50%, rgba(21,128,61,0) 100%)",
       iconColor: "text-green-500",
+    },
+    {
+      icon: <IdCard className="h-6 w-6" />,
+      label: t('tarjeta'),
+      href: getLocalizedPath('/tarjeta'),
+      gradient: "radial-gradient(circle, rgba(168,85,247,0.15) 0%, rgba(147,51,234,0.06) 50%, rgba(126,34,206,0) 100%)",
+      iconColor: "text-purple-500",
     },
     {
       icon: <ShoppingBag className="h-6 w-6" />,

@@ -1,13 +1,10 @@
 import { Inter } from "next/font/google"
 import "../globals.css"
 import { ProviderTheme } from '@/components/theme-provider';
-import { Footer } from "@/components/footer"
-import { Sidebar } from "@/components/sidebar"
-import { Toaster } from 'sonner';
-import { MenuBar } from "@/components/menu-bar"
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { routing } from '@/lib/i18n/routing';
+import { Toaster } from 'sonner';
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -34,18 +31,8 @@ export default async function RootLayout({ children, params }) {
       <body className={inter.className} suppressHydrationWarning>
         <ProviderTheme defaultTheme={['light']} enableSystem={false} attribute="class" themes={['light', 'dark']}>
           <NextIntlClientProvider messages={messages}>
-            <div className="flex min-h-screen bg-[#D3EE98] text-[#18230F]">
-              <div className="flex md:flex-col">
-                {/* The Sidebar component will be rendered on all pages */}
-                <Sidebar />
-                <div>
-                  {children}
-                  <Toaster position="top-center" richColors />
-                  <MenuBar />
-                  <Footer />
-                </div>
-              </div>
-            </div>
+            {children}
+            <Toaster position="top-center" richColors />
           </NextIntlClientProvider>
         </ProviderTheme>
       </body>

@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { ArrowUpRight, MapPin, Phone } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
-import { useTranslations } from 'next-intl'
+import { motion } from "framer-motion";
+import { ArrowUpRight, MapPin, Phone } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function HomePage() {
-  const t = useTranslations('home')
-  const tProjects = useTranslations('projects')
+  const t = useTranslations("home");
+  const tProjects = useTranslations("projects");
 
   const clients = [
     { name: "OpenAI", logo: "/images/chatgpt.png" },
@@ -16,7 +16,7 @@ export default function HomePage() {
     { name: "Gemini AI", logo: "/images/gemini-logo.png" },
     { name: "Claude AI", logo: "/images/claude-ai-logo.png" },
     { name: "Make.com", logo: "/images/logo-make.png" },
-  ]
+  ];
 
   const projects = [
     {
@@ -53,6 +53,16 @@ export default function HomePage() {
       key: "radio",
       image: "/images/fmbahiaengano.png",
       link: "https://fmbahiaengano.com/",
+    },
+    {
+      key: "adn",
+      image: "/images/adn2026.avif",
+      link: "https://cdarawson.com/adn2026/",
+    },
+    {
+      key: "caferestopos",
+      image: "/images/caferestopos.avif",
+      link: "https://www.caferestopos.com/",
     },
     {
       key: "cecilia",
@@ -99,7 +109,7 @@ export default function HomePage() {
       image: "/images/worldcup.jpg",
       link: "https://worldcup22-football.vercel.app/",
     },
-  ]
+  ];
 
   return (
     <>
@@ -109,7 +119,7 @@ export default function HomePage() {
           {/* Available badge */}
           <div className="inline-flex items-center px-3 py-1 rounded-full text-sm mb-8 bg-[#FEFF9F] text-[#18230F] border border-[#72BF78]/30">
             <span className="w-2 h-2 rounded-full bg-[#72BF78] mr-2"></span>
-            {t('available')}
+            {t("available")}
           </div>
 
           {/* Hero section */}
@@ -119,8 +129,21 @@ export default function HomePage() {
             transition={{ duration: 0.5 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-[#18230F]"
           >
-            {t('greeting')} <span className="inline-block animate-wave">👋</span>
+            {t("greeting")}{" "}
+            <span className="inline-block animate-wave">👋</span>
+            <span className="block mt-2 lg:mt-4 text-3xl md:text-4xl lg:text-5xl text-[#1F7D53]">
+              {t("greeting_span")}
+            </span>
           </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.05 }}
+            className="text-sm md:text-base lg:text-lg mb-6 text-[#27391C] max-w-3xl font-medium"
+          >
+            {t("seo_description")}
+          </motion.p>
 
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -128,7 +151,7 @@ export default function HomePage() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-2xl md:text-3xl lg:text-4xl font-medium mb-8 text-[#27391C]"
           >
-            {t('subtitle')}
+            {t("subtitle")}
           </motion.h2>
 
           <motion.div
@@ -138,7 +161,7 @@ export default function HomePage() {
             className="flex items-center mb-8 text-[#1F7D53] italic"
           >
             <MapPin size={18} className="mr-2" />
-            {t('location')}
+            {t("location")}
           </motion.div>
 
           <motion.p
@@ -147,7 +170,7 @@ export default function HomePage() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-lg mb-8 text-[#27391C]"
           >
-            {t('description')}
+            {t("description")}
           </motion.p>
 
           {/* CTA buttons */}
@@ -161,16 +184,16 @@ export default function HomePage() {
               href="/about"
               className="px-6 py-2.5 rounded-md font-medium bg-[#72BF78] text-white hover:bg-[#72BF78]/90 transition-colors"
             >
-              {t('aboutButton')}
+              {t("aboutButton")}
             </Link>
-            <Link 
-              href="https://calendar.app.google/qB7HtErZcYHQXboN7" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <Link
+              href="https://calendar.app.google/qB7HtErZcYHQXboN7"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-6 py-2.5 rounded-md font-medium flex items-center bg-[#FEFF9F] text-[#18230F] hover:bg-[#FEFF9F]/90 transition-colors"
             >
               <Phone size={16} className="mr-2" />
-              {t('bookCall')}
+              {t("bookCall")}
             </Link>
           </motion.div>
 
@@ -183,13 +206,13 @@ export default function HomePage() {
               transition={{ duration: 0.5 }}
               className="text-3xl font-bold mb-12 text-[#18230F]"
             >
-              {t('poweredWork')}
+              {t("poweredWork")}
             </motion.h2>
             <div className="relative overflow-hidden">
               {/* Gradient masks for smooth edges */}
               <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#D3EE98] to-transparent z-10"></div>
               <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#D3EE98] to-transparent z-10"></div>
-              
+
               <motion.div
                 className="flex items-center gap-12"
                 animate={{
@@ -205,21 +228,23 @@ export default function HomePage() {
                 }}
               >
                 {/* Duplicate clients multiple times for seamless loop */}
-                {[...clients, ...clients, ...clients, ...clients].map((client, index) => (
-                  <div
-                    key={index}
-                    className="flex-shrink-0 hover:opacity-100 transition-opacity"
-                  >
-                    <Image
-                      src={client.logo || "/placeholder.svg"}
-                      alt={client.name}
-                      width={120}
-                      height={70}
-                      priority={index < clients.length}
-                      className="h-14 w-auto object-contain"
-                    />
-                  </div>
-                ))}
+                {[...clients, ...clients, ...clients, ...clients].map(
+                  (client, index) => (
+                    <div
+                      key={index}
+                      className="flex-shrink-0 hover:opacity-100 transition-opacity"
+                    >
+                      <Image
+                        src={client.logo || "/placeholder.svg"}
+                        alt={client.name}
+                        width={120}
+                        height={70}
+                        priority={index < clients.length}
+                        className="h-14 w-auto object-contain"
+                      />
+                    </div>
+                  ),
+                )}
               </motion.div>
             </div>
           </div>
@@ -232,7 +257,7 @@ export default function HomePage() {
             transition={{ duration: 0.5 }}
             className="text-3xl font-bold mb-12 text-[#18230F]"
           >
-            {t('selectedWork')}
+            {t("selectedWork")}
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
@@ -252,7 +277,11 @@ export default function HomePage() {
                       transition={{ duration: 0.4 }}
                       className="relative aspect-video"
                     >
-                      <Link href={project.link} target="_blank" rel="noopener noreferrer">
+                      <Link
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Image
                           src={project.image || "/placeholder.svg"}
                           alt={tProjects(`${project.key}.title`)}
@@ -272,7 +301,9 @@ export default function HomePage() {
                       <ArrowUpRight size={16} />
                     </motion.span>
                   </h3>
-                  <p className="text-[#27391C]">{tProjects(`${project.key}.description`)}</p>
+                  <p className="text-[#27391C]">
+                    {tProjects(`${project.key}.description`)}
+                  </p>
                 </div>
               </motion.div>
             ))}
@@ -280,5 +311,5 @@ export default function HomePage() {
         </div>
       </main>
     </>
-  )
+  );
 }
