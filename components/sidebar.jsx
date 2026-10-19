@@ -90,14 +90,14 @@ export function Sidebar() {
               <span>{t('tarjeta')}</span>
             </Link>
           </li>
-          <li>
+          {/*<li>
             <Link
               href="https://www.itechrawson.com.ar" target="_blank" rel="noopener noreferrer"
               className="flex items-center space-x-3 px-4 py-2.5 rounded-md">
               <Store size={18} />
               <span>{t('store')}</span>
             </Link>
-          </li>
+          </li>*/}
         </ul>
       </nav>
 
